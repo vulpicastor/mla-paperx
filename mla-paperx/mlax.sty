@@ -76,6 +76,12 @@
 
 %\newcommand{\partab}{\hspace{0.5in}}
 
+% Date format
+\usepackage{datetime}
+\newdateformat{mlaxdate}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
+\mlaxdate
+
+
 %   MLA environment
 \newenvironment{mla}[5]
 {
