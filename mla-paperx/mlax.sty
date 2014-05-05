@@ -161,6 +161,6 @@
 % Setting up Biber
 \usepackage[backend=biber,style=mla]{biblatex}
 \usepackage{hyperref}
-\renewcommand{\bibsetup}{\bibhang=0.5in \bibitemsep=\z@ \bibparsep=\bibitemsep}
-\defbibheading{bibmla}[\bibname]{\singlespacing \noindent \centering #1}
+\renewcommand{\bibsetup}{\setstretch{2} \bibhang=0.5in \bibitemsep=\z@ \bibparsep=\bibitemsep}
+\defbibheading{bibmla}[\bibname]{\noindent \centering #1 \bibnamesep=-10\p@ }
 \newcommand{\workscited}{\newpage \printbibliography[heading=bibmla]}
