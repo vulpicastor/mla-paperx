@@ -20,7 +20,7 @@
 %   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %    
-%    Last updated on 18 April 2014.  
+%    Last updated on 20 June 2014.  
 %    
 %    For use with XeLaTeX.
 %
@@ -94,21 +94,30 @@
 %    \fancyfoot{}
     \thispagestyle{plain}
     \flushleft
-    \begin{singlespace}
-        \firstname \ \lastname \\
-        \classname \\
-        \mladate
-        \vspace{\baselineskip}
-    
-        \centering 
-        \mlatitle
-    \end{singlespace}
-    
-    \raggedright
     \setlength{\parindent}{0.5in}
 }
 {\newpage}
 
+\newcommand{\makeauthor}
+{
+    \setlength{\parindent}{\z@}
+    \begin{singlespace}
+        \firstname \ \lastname \\
+        \classname \\
+        \mladate
+    \end{singlespace}
+    \setlength{\parindent}{0.5in}
+}
+
+\renewcommand{\maketitle}
+{
+    \setlength{\parindent}{\z@}
+    \begin{singlespace}
+        \centering 
+        \mlatitle
+    \end{singlespace}
+    \setlength{\parindent}{0.5in}
+}
 
 %   Single-spaced quote environment
 \renewenvironment{verse}
